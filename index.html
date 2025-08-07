@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RashtraVote</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="container" id="login">
+    <h1>RashtraVote Login</h1>
+    <input type="text" placeholder="Aadhaar Number">
+    <input type="text" placeholder="Voter ID">
+    <button class="scan-btn" onclick="nextPage('dashboard')">Face Scan & Continue</button>
+  </div>
+
+  <div class="container hidden" id="dashboard">
+    <h1>Welcome Voter</h1>
+    <p style="margin: 15px 0;">You are eligible to vote in your constituency. Please proceed to cast your vote.</p>
+    <button onclick="nextPage('vote')">Go to Voting Booth</button>
+  </div>
+
+  <div class="container hidden" id="vote">
+    <h1>Cast Your Vote</h1>
+    <div class="candidates">
+      <label><input type="radio" name="candidate"> Candidate 1 (Party A)</label>
+      <label><input type="radio" name="candidate"> Candidate 2 (Party B)</label>
+      <label><input type="radio" name="candidate"> Candidate 3 (Party C)</label>
+    </div>
+    <button onclick="nextPage('thankyou')">Submit Vote</button>
+  </div>
+
+  <div class="container hidden" id="thankyou">
+    <h1>Thank You!</h1>
+    <p style="margin: 15px 0; text-align:center;">Your vote has been successfully submitted. Jai Hind 🇮🇳</p>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>
